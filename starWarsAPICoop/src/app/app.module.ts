@@ -4,12 +4,14 @@ import { AppComponent } from './app.component';
 import { ImportsMaterialModule } from './imports-material/imports-material.module';
 import { MenuComponent } from './components/menu/menu.component';
 import { SpeciesComponent } from './components/species/species.component';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
-    SpeciesComponent
+    SpeciesComponent,
+    PageNotFoundComponent
   ],
   imports: [
     ImportsMaterialModule,

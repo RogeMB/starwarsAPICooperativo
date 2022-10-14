@@ -1,0 +1,21 @@
+.backgroundCustom {
+  background-image: url(../../../assets/starwarspagenotfound.png)!important;
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 0 auto;
+}
+
+.prettyButtom{
+  position: relative;
+}
+
+.overlay-text{
+  position: absolute;
+  margin: auto;
+  margin-top: 15%;
+  top: 75%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-family: "jedi";
+}
+
