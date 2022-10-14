@@ -13,3 +13,10 @@
   background-color: rgba(0, 0, 0, 0.411);
   font-family: "jedi";
 }
+
+.fuente {
+  font-family: "jedi";
+  color:white;
+  margin-top: 15px;
+  margin-left: 15px;
+}
