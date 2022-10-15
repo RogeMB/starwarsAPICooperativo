@@ -1,0 +1,32 @@
+<div class="text-center pt-5">
+  <img
+    src="https://1000marcas.net/wp-content/uploads/2019/12/logo-StarWars.png"
+    alt="Star Wars Logo"
+    class="w-25 mb-5"
+  />
+</div>
+<!--AQUI ME FALTA UN NAV QUE MANDE AL HOME Y PUEDA PASAR ENTRE PÁGINAS (EJEMPLO EN 7 MIGUEL)-->
+
+<div class="container">
+  <div class="row justify-content-right">
+    <span *ngFor="let in of counter() ;let i = index"><button (click)="getSpeciePage(i+1)">{{i+1}}</button>&nbsp;</span>
+  </div>
+  <div class="row justify-content-center">
+    <mat-card
+      class="example-card col-2 m-3" *ngFor="let species of speciesList">
+      <img mat-card-image [src]="getPhotoUrl(species)"
+      onerror="this.onerror = null; this.src = 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png'"
+      alt="Foto personaje" />
+      <mat-card-content>
+        <p class="text-center">
+          {{ species.name }}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="text-center">
+          <button mat-button class="btn btn-primary">INFO</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>
