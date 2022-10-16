@@ -1,0 +1,46 @@
+<div class="text-center pt-5">
+  <img
+    src="https://1000marcas.net/wp-content/uploads/2019/12/logo-StarWars.png"
+    alt="Star Wars Logo"
+    class="w-25 mb-5"
+  />
+</div>
+
+<div class="container" [ngStyle]="{'font-family': 'Roboto'}">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb fst-italic fs-4">
+      <li class="breadcrumb-item fw-bold text-uppercase"><a routerLink="/menu" class="text-decoration-none">H o m e</a></li>
+      <li class="breadcrumb-item active text-warning" aria-current="page">C h a r a c t e r s</li>
+    </ol>
+  </nav>
+  <div class="text-center" [ngStyle]="{'font-family': 'jedi'}">
+    <span *ngFor="let in of counter(); let i = index"
+      ><button (click)="getCharacterPage(i + 1)">{{ i + 1 }}</button
+      >&nbsp;</span
+    >
+  </div>
+  <div class="row justify-content-center">
+    <mat-card
+      class="example-card col-2 m-3"
+      *ngFor="let character of characterList"
+    >
+      <img
+        mat-card-image
+        [src]="getPhotoUrl(character)" [ngStyle]="{height: 250 + 'px'}"
+        onerror="this.onerror = null; this.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg'"
+        alt="Foto personaje"
+      />
+      <mat-card-content>
+        <p class="text-center fw-bold" [ngStyle]="{'font-family': 'Roboto'}">
+          {{ character.name }}
+          {{character.birth_year}}
+        </p>
+      </mat-card-content>
+      <mat-card-actions>
+        <div class="text-center d-grid">
+          <button (click)="openDialog(character)" mat-button class="btn btn-primary" [ngStyle]="{'font-family': 'Roboto'}"> + INFO</button>
+        </div>
+      </mat-card-actions>
+    </mat-card>
+  </div>
+</div>

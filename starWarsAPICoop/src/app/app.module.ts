@@ -7,6 +7,8 @@ import { SpeciesComponent } from './components/species/species.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
+import { CharactersComponent } from './components/characters/characters.component';
+import { CharactersDialogComponent } from './components/characters-dialog/characters-dialog.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +17,9 @@ import { VehiclesComponent } from './components/vehicles/vehicles.component';
     SpeciesComponent,
     PageNotFoundComponent,
     StarshipsComponent,
-    VehiclesComponent
+    VehiclesComponent,
+    CharactersComponent,
+    CharactersDialogComponent
   ],
   imports: [
     ImportsMaterialModule,

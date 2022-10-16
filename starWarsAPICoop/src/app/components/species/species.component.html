@@ -7,23 +7,29 @@
 </div>
 
 <div class="container">
-  <div class="text-center">
+  <nav aria-label="breadcrumb">
+    <ol class="breadcrumb fst-italic fs-4">
+      <li class="breadcrumb-item fw-bold text-uppercase"><a routerLink="/menu" class="text-decoration-none">H o m e</a></li>
+      <li class="breadcrumb-item active text-warning" aria-current="page">S p e c i e s</li>
+    </ol>
+  </nav>
+  <div class="text-center" [ngStyle]="{'font-family': 'jedi'}">
     <span *ngFor="let in of counter() ;let i = index"><button (click)="getSpeciePage(i+1)">{{i+1}}</button>&nbsp;</span>
   </div>
   <div class="row justify-content-center">
     <mat-card
       class="example-card col-2 m-3" *ngFor="let species of speciesList">
-      <img mat-card-image [src]="getPhotoUrl(species)"
-      onerror="this.onerror = null; this.src = 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png'"
+      <img mat-card-image [src]="getPhotoUrl(species)" [ngStyle]="{height: 250 + 'px'}"
+      onerror="this.onerror = null; this.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg'"
       alt="Foto personaje" />
       <mat-card-content>
-        <p class="text-center">
+        <p class="text-center fw-bold" [ngStyle]="{'font-family': 'Roboto'}">
           {{ species.name }}
         </p>
       </mat-card-content>
       <mat-card-actions>
-        <div class="text-center">
-          <button mat-button class="btn btn-primary">INFO</button>
+        <div class="text-center d-grid">
+          <button mat-button class="btn btn-primary" role="button" [ngStyle]="{'font-family': 'Roboto'}"> + INFO</button>
         </div>
       </mat-card-actions>
     </mat-card>
