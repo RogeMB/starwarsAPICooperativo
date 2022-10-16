@@ -6,6 +6,7 @@ import { MenuComponent } from './components/menu/menu.component';
 import { SpeciesComponent } from './components/species/species.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { StarshipsComponent } from './components/starships/starships.component';
+import { VehiclesComponent } from './components/vehicles/vehicles.component';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { StarshipsComponent } from './components/starships/starships.component';
     MenuComponent,
     SpeciesComponent,
     PageNotFoundComponent,
-    StarshipsComponent
+    StarshipsComponent,
+    VehiclesComponent
   ],
   imports: [
     ImportsMaterialModule,
