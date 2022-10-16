@@ -5,13 +5,15 @@ import { ImportsMaterialModule } from './imports-material/imports-material.modul
 import { MenuComponent } from './components/menu/menu.component';
 import { SpeciesComponent } from './components/species/species.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { StarshipsComponent } from './components/starships/starships.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     MenuComponent,
     SpeciesComponent,
-    PageNotFoundComponent
+    PageNotFoundComponent,
+    StarshipsComponent
   ],
   imports: [
     ImportsMaterialModule,

@@ -8,17 +8,17 @@
 
 <div class="container">
   <div class="row justify-content-right">
-    <span *ngFor="let in of counter() ;let i = index"><button (click)="getSpeciePage(i+1)">{{i+1}}</button>&nbsp;</span>
+    <span *ngFor="let in of counter() ;let i = index"><button (click)="getStarshipPage(i+1)">{{i+1}}</button>&nbsp;</span>
   </div>
   <div class="row justify-content-center">
     <mat-card
-      class="example-card col-2 m-3" *ngFor="let species of speciesList">
-      <img mat-card-image [src]="getPhotoUrl(species)"
+      class="example-card col-2 m-3" *ngFor="let starship of starshipList">
+      <img mat-card-image [src]="getPhotoUrl(starship)"
       onerror="this.onerror = null; this.src = 'https://www.salonlfc.com/wp-content/uploads/2018/01/image-not-found-scaled-1150x647.png'"
       alt="Foto personaje" />
       <mat-card-content>
         <p class="text-center">
-          {{ species.name }}
+          {{ starship.name }}
         </p>
       </mat-card-content>
       <mat-card-actions>
