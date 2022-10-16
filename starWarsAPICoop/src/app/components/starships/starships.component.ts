@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Starship } from 'src/app/interfaces/starships';
 import { StarshipsService } from 'src/app/services/starships.service';
+import { StarshipsDialogComponent } from './starships-dialog/starships-dialog.component';
 
 @Component({
   selector: 'app-starships',
@@ -11,8 +13,9 @@ export class StarshipsComponent implements OnInit {
 
   starshipList: Starship[]=[];
   pages: number = 0;
+  starshipSelected: Starship | undefined;
 
-  constructor(private starshipService: StarshipsService) { }
+  constructor(private starshipService: StarshipsService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getStarshipPage(1);
@@ -42,4 +45,18 @@ export class StarshipsComponent implements OnInit {
     return new Array(this.pages);
   }
 
+  showStarshipInfo(starship: Starship){
+    this.starshipService.getStarshipById(starship).subscribe(response =>{
+      this.starshipSelected = response;
+
+      this.dialog.open(StarshipsDialogComponent, {
+        width: '250px',
+        enterAnimationDuration: '3000ms',
+        exitAnimationDuration: '1500ms',
+        data:{
+          starshipInfo: this.starshipSelected
+        }
+      })
+    })
+  }
 }

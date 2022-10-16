@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Character, CharacterResult } from 'src/app/interfaces/characters';
 import { CharacterService } from 'src/app/services/characters.service';
-import { CharactersDialogComponent } from '../characters-dialog/characters-dialog.component';
+import { CharactersDialogComponent } from './characters-dialog/characters-dialog.component';
 
 @Component({
   selector: 'app-characters',
@@ -47,7 +47,7 @@ export class CharactersComponent implements OnInit {
     return new Array(this.pages);
   }
 
-  openDialog(character: Character){
+  showCharacterInfo(character: Character){
     this.characterService.getCharacterById(character).subscribe(response =>{
       this.characterSelected = response;
 
@@ -61,5 +61,5 @@ export class CharactersComponent implements OnInit {
       })
     })
   }
-  
+
 }

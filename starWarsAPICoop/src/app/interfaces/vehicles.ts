@@ -23,3 +23,6 @@ export interface Vehicle {
   edited: string
   url: string
 }
+export interface VehicleData {
+  vehicleInfo: Vehicle;
+}

@@ -33,12 +33,11 @@
       <mat-card-content>
         <p class="text-center fw-bold" [ngStyle]="{'font-family': 'Roboto'}">
           {{ character.name }}
-          {{character.birth_year}}
         </p>
       </mat-card-content>
       <mat-card-actions>
         <div class="text-center d-grid">
-          <button (click)="openDialog(character)" mat-button class="btn btn-primary" [ngStyle]="{'font-family': 'Roboto'}"> + INFO</button>
+          <button (click)="showCharacterInfo(character)" mat-button class="btn btn-primary" [ngStyle]="{'font-family': 'Roboto'}"> + INFO</button>
         </div>
       </mat-card-actions>
     </mat-card>

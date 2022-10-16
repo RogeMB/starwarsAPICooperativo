@@ -25,3 +25,6 @@ export interface Starship {
   edited: string
   url: string
 }
+export interface StarshipData {
+  starshipInfo: Starship;
+}
