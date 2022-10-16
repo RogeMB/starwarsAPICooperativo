@@ -21,7 +21,7 @@
       class="example-card col-2 m-3" *ngFor="let vehicle of vehicleList">
       <img mat-card-image [src]="getPhotoUrl(vehicle)" [ngStyle]="{height: 200 + 'px'}"
       onerror="this.onerror = null; this.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg'"
-      alt="Foto personaje" />
+      alt="Foto del vehículo" />
       <mat-card-content>
         <p class="text-center fw-bold" [ngStyle]="{'font-family': 'Roboto'}">
           {{ vehicle.name }}
