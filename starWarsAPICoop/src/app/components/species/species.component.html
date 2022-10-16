@@ -21,7 +21,7 @@
       class="example-card col-2 m-3" *ngFor="let species of speciesList">
       <img mat-card-image [src]="getPhotoUrl(species)" [ngStyle]="{height: 250 + 'px'}"
       onerror="this.onerror = null; this.src = 'https://starwars-visualguide.com/assets/img/placeholder.jpg'"
-      alt="Foto personaje" />
+      alt="Foto de la especie" />
       <mat-card-content>
         <p class="text-center fw-bold" [ngStyle]="{'font-family': 'Roboto'}">
           {{ species.name }}
