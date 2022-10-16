@@ -22,3 +22,7 @@ export interface Specie {
   edited: string
   url: string
 }
+
+export interface SpecieData {
+  specieInfo: Specie;
+}

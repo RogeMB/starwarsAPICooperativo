@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MatDialog } from '@angular/material/dialog';
 import { Specie } from 'src/app/interfaces/species';
 import { SpeciesService } from 'src/app/services/species.service';
+import { SpeciesDialogComponent } from './species-dialog/species-dialog.component';
 
 @Component({
   selector: 'app-species',
@@ -11,8 +13,9 @@ export class SpeciesComponent implements OnInit {
 
   speciesList: Specie[]=[];
   pages: number = 0;
+  specieSelected: Specie | undefined;
 
-  constructor(private specieService: SpeciesService) { }
+  constructor(private specieService: SpeciesService, private dialog: MatDialog) { }
 
   ngOnInit(): void {
     this.getSpeciePage(1);
@@ -41,5 +44,19 @@ export class SpeciesComponent implements OnInit {
   }
 
 
+  showSpecieInfo(specie: Specie){
+    this.specieService.getSpecieById(specie).subscribe(response =>{
+      this.specieSelected = response;
+
+      this.dialog.open(SpeciesDialogComponent, {
+        width: '250px',
+        enterAnimationDuration: '3000ms',
+        exitAnimationDuration: '1500ms',
+        data:{
+          specieInfo: this.specieSelected
+        }
+      })
+    })
+  }
 
 }

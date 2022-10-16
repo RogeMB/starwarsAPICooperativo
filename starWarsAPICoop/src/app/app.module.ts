@@ -8,7 +8,11 @@ import { PageNotFoundComponent } from './components/page-not-found/page-not-foun
 import { StarshipsComponent } from './components/starships/starships.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
 import { CharactersComponent } from './components/characters/characters.component';
-import { CharactersDialogComponent } from './components/characters-dialog/characters-dialog.component';
+import { CharactersDialogComponent } from './components/characters/characters-dialog/characters-dialog.component';
+import { SpeciesDialogComponent } from './components/species/species-dialog/species-dialog.component';
+import { StarshipsDialogComponent } from './components/starships/starships-dialog/starships-dialog.component';
+import { VehiclesDialogComponent } from './components/vehicles/vehicles-dialog/vehicles-dialog.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +23,10 @@ import { CharactersDialogComponent } from './components/characters-dialog/charac
     StarshipsComponent,
     VehiclesComponent,
     CharactersComponent,
-    CharactersDialogComponent
+    CharactersDialogComponent,
+    SpeciesDialogComponent,
+    StarshipsDialogComponent,
+    VehiclesDialogComponent
   ],
   imports: [
     ImportsMaterialModule,

@@ -14,9 +14,9 @@ export class CharacterService {
   getCharacters(page: number): Observable<CharacterResult>{
     return this.http.get<CharacterResult>(`${environment.apiBaseUrl}/people?page=${page}`);
   }
-  
+
   public getCharacterById(character: Character): Observable<Character> {
     let id = character.url.split('/').reverse()[1];
-    return this.http.get<Character>(`${environment.apiBaseUrl}people/${id}`)
+    return this.http.get<Character>(`${environment.apiBaseUrl}/people/${id}`)
   }
 }

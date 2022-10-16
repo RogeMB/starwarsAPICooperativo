@@ -1,0 +1,14 @@
+<h1 mat-dialog-title class="text-center">{{data.vehicleInfo.name}}</h1>
+<div mat-dialog-content class="text-center">
+  <ul style="list-style: circle;">
+    <li>Modelo: {{data.vehicleInfo.model}}</li>
+    <li>Longitud: {{data.vehicleInfo.length}}</li>
+    <li>Coste: {{data.vehicleInfo.cost_in_credits}}</li>
+    <li>Velocidad atm: {{data.vehicleInfo.max_atmosphering_speed}}</li>
+    <li>Carga: {{data.vehicleInfo.cargo_capacity}}</li>
+    <li>Pasajeros: {{data.vehicleInfo.pilots}}</li>
+  </ul>
+</div>
+<div mat-dialog-actions class="d-grid text-center" >
+  <button mat-button mat-dialog-close color="prymary" cdkFocusInitial>Ok</button>
+</div>

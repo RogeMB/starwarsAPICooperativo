@@ -29,7 +29,7 @@
       </mat-card-content>
       <mat-card-actions>
         <div class="text-center d-grid">
-          <button mat-button class="btn btn-primary" [ngStyle]="{'font-family': 'Roboto'}"> + INFO</button>
+          <button mat-button (click)="showVehicleInfo(vehicle)" class="btn btn-primary" [ngStyle]="{'font-family': 'Roboto'}"> + INFO</button>
         </div>
       </mat-card-actions>
     </mat-card>
