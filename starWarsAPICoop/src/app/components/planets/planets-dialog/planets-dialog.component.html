@@ -1,10 +1,12 @@
-<h1 mat-dialog-title class="text-center">{{data.planetInfo}}</h1>
+<h1 mat-dialog-title class="text-center">{{data.planetInfo.name}}</h1>
 <div mat-dialog-content class="text-center">
   <ul>
-    <li>Director: {{data.planetInfo}}</li>
-    <li>Productor: {{data.planetInfo}}</li>
-    <li>Fecha de lanzamiento: {{data.planetInfo}}</li>
-    <li>Episodio: {{data.planetInfo}}</li>
+    <li>Clima: {{data.planetInfo.climate}}</li>
+    <li>Gravedad: {{data.planetInfo.gravity}}</li>
+    <li>Diámetro: {{data.planetInfo.diameter}}</li>
+    <li>Población: {{data.planetInfo.population}}</li>
+    <li>Superficie de agua: {{data.planetInfo.surface_water}}</li>
+    <li>Período de rotación: {{data.planetInfo.rotation_period}}</li>
   </ul>
 </div>
 <div mat-dialog-actions class="d-grid text-center" >
