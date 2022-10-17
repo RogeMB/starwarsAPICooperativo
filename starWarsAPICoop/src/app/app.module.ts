@@ -14,6 +14,8 @@ import { StarshipsDialogComponent } from './components/starships/starships-dialo
 import { VehiclesDialogComponent } from './components/vehicles/vehicles-dialog/vehicles-dialog.component';
 import { FilmsComponent } from './components/films/films.component';
 import { FilmsDialogComponent } from './components/films/films-dialog/films-dialog.component';
+import { PlanetsComponent } from './components/planets/planets.component';
+import { PlanetsDialogComponent } from './components/planets/planets-dialog/planets-dialog.component';
 
 
 @NgModule({
@@ -30,7 +32,9 @@ import { FilmsDialogComponent } from './components/films/films-dialog/films-dial
     StarshipsDialogComponent,
     VehiclesDialogComponent,
     FilmsComponent,
-    FilmsDialogComponent
+    FilmsDialogComponent,
+    PlanetsComponent,
+    PlanetsDialogComponent
   ],
   imports: [
     ImportsMaterialModule,
