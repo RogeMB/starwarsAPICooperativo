@@ -4,6 +4,7 @@ import { CharactersComponent } from './components/characters/characters.componen
 import { FilmsComponent } from './components/films/films.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PlanetsComponent } from './components/planets/planets.component';
 import { SpeciesComponent } from './components/species/species.component';
 import { StarshipsComponent } from './components/starships/starships.component';
 import { VehiclesComponent } from './components/vehicles/vehicles.component';
@@ -12,7 +13,7 @@ const routes: Routes = [
   {path: 'menu', component: MenuComponent},
   {path: 'characters', component: CharactersComponent},
   {path: 'films', component: FilmsComponent},
-  {path: 'characters', component: CharactersComponent},
+  {path: 'planets', component: PlanetsComponent},
   {path: 'species', component: SpeciesComponent},
   {path: 'starships', component: StarshipsComponent},
   {path: 'vehicles', component: VehiclesComponent},
