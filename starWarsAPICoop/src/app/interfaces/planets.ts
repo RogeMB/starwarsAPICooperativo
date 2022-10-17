@@ -23,6 +23,6 @@ export interface PlanetResult {
   }
 
   export interface PlanetData {
-    planetInfo: PlanetData;
+    planetInfo: Planet;
   }
   
